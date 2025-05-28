@@ -1,0 +1,311 @@
+
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p a{
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.product-card, .cart-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img, .cart-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.popup {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.popup-content form {
+  display: grid;
+  gap: 10px;
+}
+
+.popup-content label {
+  font-weight: bold;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="url"],
+.popup-content input[type="number"] {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-content button[type="submit"] {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .popup-content {
+    width: 90%;
+  }
+}
+
+
+.product-actions, .cart-actions {
+  margin-top: 10px;
+}
+
+.product-actions button, .cart-actions button {
+  margin-right: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-actions button.edit-button {
+  background-color: #28a745; 
+  color: #fff;
+}
+
+.product-actions button.delete-button, .cart-actions button.remove-button {
+  background-color: red;
+  color: #fff;
+}
+
+.product-actions button:hover, .cart-actions button:hover {
+  opacity: 0.8;
+}
+
+.add-product-button {
+  position: fixed;
+  top: 15%;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-product-button:hover {
+  background-color: #0056b3;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+
+table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto; 
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+input{
+  width: calc(100% - 20px); 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+button[type="submit"] {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px; 
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.signup-link {
+  margin-top: 10px; 
+}
+
+.signup-link p {
+  margin: 0;
+}
+
+.signup-link a {
+  color: #007bff; 
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline; 
+}
+
+#checkoutButton {
+  background-color: #28a745; 
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; 
+}
+
+#checkoutButton:hover {
+  background-color: #218838; 
+}
+.header-content{
+  background: url('images/back.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 2.5em;
+}
+.header-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
