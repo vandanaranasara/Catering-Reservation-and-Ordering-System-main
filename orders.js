@@ -1,6 +1,6 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBPcXt8H2N6hlu4ru0bPuzO9bVedeWxPWg",
+    apiKey: "",
     authDomain: "unified-mentor-order-system.firebaseapp.com",
     projectId: "unified-mentor-order-system",
     storageBucket: "unified-mentor-order-system.appspot.com",
